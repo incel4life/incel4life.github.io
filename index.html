@@ -4,158 +4,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>incel4life</title>
+  <title>incel4life - home</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      background: #0d0d0d;
-      color: #f0f0f0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 24px;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: 560px;
-    }
-
-    .name {
-      font-size: 48px;
-      font-weight: bold;
-      letter-spacing: 8px;
-      margin-bottom: 8px;
-      line-height: 1;
-    }
-
-    .sub {
-      color: #555;
-      font-size: 14px;
-      letter-spacing: 4px;
-      margin-bottom: 64px;
-    }
-
-    .label {
-      font-size: 11px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: #333;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #1e1e1e;
-    }
-
-    section {
-      margin-bottom: 52px;
-    }
-
-    .interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
-      font-size: 12px;
-      letter-spacing: 2px;
-      padding: 6px 16px;
-      border: 1px solid #2a2a2a;
-      color: #777;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-      border-bottom: 1px solid #1a1a1a;
-      color: #f0f0f0;
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .link:first-child {
-      border-top: 1px solid #1a1a1a;
-    }
-
-    .link:hover {
-      color: #fff;
-    }
-
-    .link:hover .arrow {
-      opacity: 1;
-    }
-
-    .link-name {
-      letter-spacing: 4px;
-      font-size: 15px;
-    }
-
-    .arrow {
-      color: #333;
-      font-size: 13px;
-      opacity: 0;
-      transition: opacity 0.15s;
-    }
-
-    .foot {
-      font-size: 10px;
-      color: #222;
-      letter-spacing: 3px;
-      margin-top: 60px;
+      padding-bottom: 80px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <div class="name">incel4life</div>
-    <div class="sub">horny dev</div>
+  <!-- ── nav ── -->
+  <nav>
+    <a href="/" class="active">home</a>
+    <a href="https://ko-fi.com/incel4life" target="_blank">donate</a>
+  </nav>
 
-    <section>
-      <div class="label">"interests"</div>
-      <div class="interests">
+  <div class="container">
+    <div class="section center">
+      <h1>incel4life</h1>
+      <p style="margin-top:12px;">an extremely horny dev.</p>
+      <!-- <div class="cluster" style="justify-content:center; margin-top:20px;">
+        <a href="#" class="btn">get started</a>
+        <a href="#" class="btn">view source</a>
+      </div> -->
+    </div>
+
+    <!-- <hr> -->
+
+    <!-- ── typography ── -->
+    <!-- <div class="section">
+      <span class="label">typography</span>
+      <div class="stack" style="gap:16px;">
+        <h1>heading one</h1>
+        <h2>heading two</h2>
+        <h3>heading three</h3>
+        <p>Body text sits in muted grey so headings and interactive elements hold visual priority. <strong>Bold
+            text</strong> snaps back to full white. <em>Italics stay muted</em> to signal context, not emphasis.</p>
+        <div>
+          <a href="#">an inline link</a> — underlined with a faint border, full white on hover.
+        </div>
+        <small>small text / metadata / timestamps</small>
+      </div>
+    </div> -->
+
+    <hr>
+
+    <!-- ── pills & badges ── -->
+    <div class="section">
+      <span class="label">what i like</span>
+      <div class="cluster">
+        <span class="pill">tributes</span>
+        <span class="pill">pmv's</span>
         <span class="pill">g**ning</span>
-        <span class="pill">PMV's</span>
-        <span class="pill">non-n**e</span>
-        <span class="pill">bops</span>
-        <span class="pill">cr**pshots</span>
-        <span class="pill">c**tribs</span>
         <span class="pill">dev</span>
       </div>
-    </section>
-
-    <section>
-      <div class="label">links</div>
-      <div class="links">
-        <a href="https://github.com/incel4life" class="link"><span class="link-name">github</span><span
-            class="arrow">→</span></a>
-        <a href="https://discord.com/users/1477754822643155157" class="link"><span class="link-name">discord</span><span
-            class="arrow">→</span></a>
-        <a href="https://x.com/incel4ever_" class="link"><span class="link-name">twitter</span><span
-            class="arrow">→</span></a>
-        <a href="https://erome.com/incel4life_2" class="link"><span class="link-name">erome (uploads ip
-            banned)</span><span class="arrow">→</span></a>
+      <div class="cluster" style="margin-top:12px;">
+        <span class="badge">non-n**e</span>
+        <span class="badge">cr**pshots</span>
+        <span class="badge">bops</span>
       </div>
-    </section>
+    </div>
 
-    <div class="foot">go f*** yourself</div>
+    <!-- ── cards ── -->
+    <!-- <div class="section">
+      <span class="label">cards</span>
+      <div class="stack">
+        <div class="card">
+          <h3>project alpha</h3>
+          <p style="margin-top:6px;">A card with a title and body text. Sits one shade above the page background.</p>
+        </div>
+        <div class="card">
+          <h3>project beta</h3>
+          <p style="margin-top:6px;">Cards stack flush against each other with a single pixel gap.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- ── link list ── -->
+    <div class="section">
+      <span class="label">links</span>
+      <div class="link-list">
+        <a href="https://discord.com/users/1477754822643155157" target="_blank">discord <span class="arrow">→</span></a>
+        <a href="https://t.me/incel4life" target="_blank">telegram <span class="arrow">→</span></a>
+        <a href="https://x.com/incel4ever_" target="_blank">x <span class="arrow">→</span></a>
+        <a href="https://github.com/incel4life" target="_blank">github <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- ── form ── -->
+    <!-- <div class="section">
+      <span class="label">form elements</span>
+      <div class="stack" style="gap:10px; max-width:400px;">
+        <input type="text" placeholder="name">
+        <input type="email" placeholder="email">
+        <textarea rows="4" placeholder="message"></textarea>
+        <div>
+          <button>send message</button>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <hr> -->
+
+    <!-- ── table ── -->
+    <!-- <div class="section">
+      <span class="label">table</span>
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>role</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>yumeko</td>
+            <td>illustrator</td>
+            <td>active</td>
+          </tr>
+          <tr>
+            <td>hana</td>
+            <td>designer</td>
+            <td>away</td>
+          </tr>
+          <tr>
+            <td>ren</td>
+            <td>developer</td>
+            <td>active</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+
+    <!-- <hr> -->
+
+    <!-- ── code ── -->
+    <!-- <div class="section">
+      <span class="label">code</span>
+      <p>Inline: link your stylesheet with <code>&lt;link rel="stylesheet" href="flat-dark.css"&gt;</code>.</p>
+      <pre style="margin-top:14px;"><code>:root {
+  --bg:        #0d0d0d;
+  --text:      #f0f0f0;
+  --text-muted:#666;
+  --border:    #1f1f1f;
+}</code></pre>
+    </div> -->
 
   </div>
+
 </body>
 
 </html>

@@ -1,0 +1,395 @@
+/* =============================================
+   flat-dark.css
+   a minimal flat dark theme
+   ============================================= */
+
+/* ── reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── tokens ── */
+:root {
+  --bg: #0d0d0d;
+  --bg-raised: #141414;
+  --bg-sunken: #0a0a0a;
+  --border: #1f1f1f;
+  --border-mid: #2e2e2e;
+
+  --text: #f0f0f0;
+  --text-muted: #666;
+  --text-faint: #333;
+
+  --font: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'Segoe UI', monospace;
+  --font-mono: 'Courier New', monospace;
+
+  --radius: 0px;
+  --transition: 0.15s ease;
+}
+
+/* ── base ── */
+html {
+  font-size: 14px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── typography ── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+small {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--text-faint);
+}
+
+strong {
+  color: var(--text);
+  font-weight: bold;
+}
+
+em {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── links ── */
+a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-mid);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+a:hover {
+  color: #fff;
+  border-bottom-color: var(--text);
+}
+
+/* ── divider ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ── section label ── */
+.label {
+  font-size: 0.65rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ── card ── */
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+}
+
+.card+.card {
+  margin-top: 1px;
+}
+
+/* ── pill / tag ── */
+.pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border: 1px solid var(--border-mid);
+  color: var(--text-muted);
+}
+
+/* ── button ── */
+button,
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--border-mid);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+button:hover,
+.btn:hover {
+  background: var(--bg-raised);
+  border-color: var(--text-muted);
+}
+
+button:active,
+.btn:active {
+  background: var(--border);
+}
+
+/* ── input / textarea / select ── */
+input,
+textarea,
+select {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--transition);
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--text-muted);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-faint);
+}
+
+/* ── table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  color: var(--text);
+}
+
+/* ── code ── */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  color: var(--text-muted);
+}
+
+pre {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  padding: 20px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+/* ── list ── */
+ul,
+ol {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+li {
+  padding: 3px 0;
+}
+
+li::marker {
+  color: var(--text-faint);
+}
+
+/* ── nav ── */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 14px 20px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--text);
+  border-bottom: none;
+}
+
+nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+/* ── link list ── */
+.link-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.link-list a:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.link-list a .arrow {
+  color: var(--text-faint);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.link-list a:hover .arrow {
+  opacity: 1;
+}
+
+/* ── badge ── */
+.badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px solid var(--border-mid);
+  color: var(--text-faint);
+}
+
+/* ── layout helpers ── */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.row {
+  display: flex;
+  gap: 1px;
+}
+
+.row>* {
+  flex: 1;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
