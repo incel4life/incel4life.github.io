@@ -1,0 +1,72 @@
+name: Minify & Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install html-minifier-terser
+        run: npm install -g html-minifier-terser
+
+      - name: Minify HTML
+        run: |
+          mkdir -p _site
+          html-minifier-terser \
+            --collapse-whitespace \
+            --collapse-boolean-attributes \
+            --collapse-inline-tag-whitespace \
+            --decode-entities \
+            --remove-comments \
+            --remove-redundant-attributes \
+            --remove-empty-attributes \
+            --remove-empty-elements \
+            --remove-optional-tags \
+            --remove-script-type-attributes \
+            --remove-style-link-type-attributes \
+            --remove-tag-whitespace \
+            --use-short-doctype \
+            --sort-attributes \
+            --sort-class-name \
+            --minify-css '{"level":{"1":{"all":true},"2":{"all":true}}}' \
+            --minify-js '{"compress":{"passes":3},"mangle":true}' \
+            --minify-urls true \
+            --output _site/index.html \
+            index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
