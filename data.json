@@ -1,0 +1,16 @@
+{
+  "donate": "https://ko-fi.com/incel4life",
+  "links": {
+    "discord": "https://discord.com/users/1490347340605948075",
+    "telegram": "https://t.me/incel4life",
+    "twitter": "https://x.com/incel4life",
+    "github": "https://github.com/incel4life"
+  },
+  "projects": {
+    "tribsview": {
+      "description": "a multi-tile video viewer for tributes",
+      "url": "https://incel4life.github.io/tribsview",
+      "src": "https://github.com/incel4life/tribsview"
+    }
+  }
+}
